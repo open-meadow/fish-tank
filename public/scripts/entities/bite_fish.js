@@ -4,7 +4,12 @@ class BiteFish extends Fish {
     this.imageUri = '/images/bite-fish.gif';
   }
 
-  updateOneTick() {}
+  updateOneTick() {
+    this.makeNewVelocity();
+  }
 
-  onClick() {}
+  onClick(event) {
+    this.makeNewVelocity(500);
+    this.kill();
+  }
 }
